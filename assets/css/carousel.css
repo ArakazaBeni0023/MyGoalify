@@ -1,0 +1,52 @@
+.carousel {
+    gap: 1rem;
+    padding: 1rem 0;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+
+    &:hover .logos-slide {
+        animation-play-state: paused;
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), 85%, #fff);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), 85%, #fff);
+    }
+
+    .logos-slide {
+        display: flex;
+        gap: 1rem;
+        animation: scroll-left 30s linear infinite;
+
+        .img-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            height: 450px;
+
+            >img { 
+                height: 100%;
+                object-fit: contain;
+            }
+
+        }
+    }
+}
