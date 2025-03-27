@@ -197,7 +197,7 @@ body {
                     text-shadow: var(--shadow);
                     margin-top: 1rem;
                     color: var(--brand-red);
-                    letter-spacing: .4rem;
+                    letter-spacing: .25rem;
                 }
 
                 .brand-logo {
